@@ -1,0 +1,23 @@
+{
+  "name": "huangtubiao.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangtubiao/huangtubiao.github.io.git"
+  },
+  "author": "leo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huangtubiao/huangtubiao.github.io/issues"
+  },
+  "homepage": "https://github.com/huangtubiao/huangtubiao.github.io#readme",
+  "dependencies": {
+    "express": "^4.16.1",
+    "opn": "^5.1.0"
+  }
+}
