@@ -4,35 +4,299 @@
         <meta charset="utf-8">
         <title>我的简历</title>
         <style type="text/css">
-            .section_project {
-
+            body, ul, h1, h2, h3 {
+                margin: 0;
+                padding: 0;
+            }
+            ul, li {
+                list-style: none;
+            }
+            body {
+                background-color: #fff;
+                font-size: 16px;
+            }
+            .l {
+                float: left;
+            }
+            .r {
+                float: right;
+            }
+            .clearfix:after {
+                content: '\0020';
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden
+            }
+            .clearfix {
+                *zoom: 1
+            }
+            .gray_bg {
+                background-color: #f8f8f8;
+            }
+            .container {
+                width: 970px;
+                margin: auto;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            .header {
+                min-height: 80px;
+            }
+            .section {
+                padding: 20px;
+            }
+            .section .title h2, .section .title p {
+                text-align: center;
+            }
+            .section .title h2 {
+                font-size: 35px;
+            }
+            .section .title p {
+                margin: 0 0 5px 0;
+                font-size: 26px;
+                color: #787d82;
+            }
+            .project_item {
+                border-bottom: 1px solid #d9dde1;
+                overflow: hidden;
+            }
+            .project_item .item_title {
+                padding: 23px 0 7px;
+                color: #14191e;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+            .project_item .item_txt {
+                padding-top: 7px;
+                margin-right: 0;
+                overflow: hidden;
+            }
+            .project_item .item_txt_img, .project_item .item_txt_img img {
+                width: 270px;
+                /*height: 130px;*/
+                overflow: hidden;
+                margin: 0 20px 0 0;
+            }
+            .project_item .item_txt_content {
+                min-height: 140px;
+                line-height: 28px;
+                color: #787d82;
+                margin-top: -5px;
+            }
+            .project_item .item_txt_content strong {
+                color: #000;
+            }
+            .project_item .item_txt_btm {
+                padding: 14px 0 25px;
+                color: #93999f;
+                line-height: 19px;
+            }
+            .project_item .left_info li {
+                padding: 3px 5px;
+                margin-right: 5px;
+                float: left;
+                color: #FFF;
+                font-size: 12px;
+                border-radius: 4px;
+            }
+            .project_item .left_info .tag_html {
+                background-color: #FF4200;
+            }
+            .project_item .left_info .tag_css {
+                background-color: orange;
+            }
+            .project_item .left_info .tag_js {
+                color: #000;
+                background-color: #fde900;
+            }
+            .project_item .right_info a {
+                padding-left: 30px;
+                color: green;
+                text-decoration: none;
+            }
+            .work_exp_list .tl_item {
+                position: relative;
+                padding-left: 37px;
+                border-left: 1px solid #d3d7da;
+            }
+            .work_exp_list .tl_item_first:before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 20px;
+                left: -1px;
+                top: 0;
+                background-color: #fff;
+            }
+            .work_exp_list .time {
+                position: absolute;
+                left: 0;
+                top: 20px;
+                margin-left: -64px;
+                line-height: 16px;
+                font-size: 12px;
+                color: #8a8c8f;
+            }
+            .work_exp_list .time:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 60px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #d0d6d9;
+            }
+            .work_exp_list .time b {
+                font-size: 18px;
+                font-weight: 400;
+            }
+            .work_exp_list .time em {
+                display: block;
+                margin-top: 2px;
+            }
+            .work_exp_list .intro_wrap {
+                padding: 30px 0;
+            }
+            .work_exp_list .intro_logo {
+                width: 110px;
+            }
+            .work_exp_list .intro_work {
+                padding-left: 130px;
+            }
+            .work_exp_list .intro_work .title {
+                color: #93999f;
+            }
+            .work_exp_list .intro_work .title span {
+                font-weight: bold;
+                font-size: 18px;
+                color: #e73c31;
             }
         </style>
     </head>
     <body>
         <div class="wrap">
-            <div class="section_work">
-
-            </div>
-            <div class="section_project">
-                <div class="title">
-                    <h2>丰富的项目经验</h2>
-                    <p>互相促进</p>
+            <div class="header gray_bg">
+                <div class="container">
+                    
                 </div>
-                <div class="content">
-                    <div class="item">
-                        <div class="block_intro">
-                            <h3>千帆直播</h3>
-                            <div class="tag">
-                                <a href="#">HTML</a>
-                                <a href="#">Javascript</a>
+            </div>
+            <div class="section">
+                <div class="container">
+                    <div class="title">
+                        <h2>熟悉前端，对后端也有不解之情</h2>
+                        <p>3年工作经验，追求高效率的编码</p>
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+            </div>
+            <div class="section gray_bg">
+                <div class="container">
+                    <div class="title">
+                        <h2>对编程充满热情</h2>
+                        <p>大一时期就加入学校当时最牛逼的技术团队wando</p>
+                    </div>
+                    <div class="content">
+
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="container">
+                    <div class="title">
+                        <h2>曾在国内著名互联网公司任职</h2>
+                        <p>有大型项目开发、优化经验</p>
+                    </div>
+                    <div class="content">
+                        <div class="work_exp_list">
+                            <div class="clearfix tl_item tl_item_first">
+                                <span class="time">
+                                    <b>现在</b>
+                                </span>
+                                <div class="intro_wrap">
+                                    <img class="intro_logo l" src="./asset/images/logo_sohu.gif" alt="">
+                                    <div class="intro_work">
+                                        <div class="title">
+                                            <span>广州市千均网络科技有限公司</span> —— 前端开发工程师
+                                        </div>
+                                        <p>PC 直播间性能优化以及直播间的重新改版，<strong>H5直播页</strong>开发以及 H5 活动页的开发，重构前端的研发流程，结合项目引入了 gulp 构建工具，促成前端工程化，提升前端的研发效率</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="detail">
-                                PC 直播间性能优化以及直播间的重新改版，H5 直播页开发以及 H5 活动页的开发，重构前端的研发流程，结合项目引入了 gulp 构建工具，促成前端工程化，提升前端的研发效率
+                            <div class="clearfix tl_item">
+                                <span class="time">
+                                    <b>2016</b>
+                                    <em>07月15日</em>
+                                </span>
+                                <div class="intro_wrap">
+                                    <img class="intro_logo l" src="./asset/images/logo_73go.png" alt="">
+                                    <div class="intro_work">
+                                        <div class="title">
+                                            <span style="color: #36bef0">深圳市轻松行科技有限公司</span> —— 前端开发工程师
+                                        </div>
+                                        <p>PC 直播间性能优化以及直播间的重新改版，<strong>H5直播页</strong>开发以及 H5 活动页的开发，重构前端的研发流程，结合项目引入了 gulp 构建工具，促成前端工程化，提升前端的研发效率</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix tl_item">
+                                <span class="time">
+                                    <b>2016</b>
+                                    <em>07月15日</em>
+                                </span>
+                                <div class="intro_wrap">
+                                    <img class="intro_logo l" src="./asset/images/logo_biaker.png" alt="">
+                                    <div class="intro_work">
+                                        <div class="title">
+                                            <span style="color: #00ccaa">惠州思博互联网科技有限公司</span> —— 前端开发工程师
+                                        </div>
+                                        <p>PC 直播间性能优化以及直播间的重新改版，<strong>H5直播页</strong>开发以及 H5 活动页的开发，重构前端的研发流程，结合项目引入了 gulp 构建工具，促成前端工程化，提升前端的研发效率</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix tl_item">
+                                <span class="time">
+                                    <b>2016</b>
+                                    <em>07月15日</em>
+                                </span>
+                                <div class="intro_wrap">
+                                </div>
                             </div>
                         </div>
-                        <div class="block_img">
-                            <img src="./asset/images/qf_pc.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="section gray_bg">
+                <div class="container">
+                    <div class="title">
+                        <h2>丰富的项目经验</h2>
+                        <p>业余项目和公司项目互相促进</p>
+                    </div>
+                    <div class="content">
+                        <div class="project_item">
+                            <h3 class="item_title">Android开发者2017年最值得关注的25个库</h3>
+                            <div class="item_txt">
+                                <div class="item_txt_img l">
+                                    <img class="img_project" src="./asset/images/qf_pc.png" alt="">
+                                </div>
+                                <p class="item_txt_content">
+                                    PC 直播间性能优化以及直播间的重新改版，<strong>H5直播页</strong>开发以及 H5 活动页的开发，重构前端的研发流程，结合项目引入了 gulp 构建工具，促成前端工程化，提升前端的研发效率
+                                </p>
+                                <div class="item_txt_btm clearfix">
+                        			<ul class="l left_info">
+                                        <li class="tag_html">HTML</li>
+                                        <li class="tag_css">CSS</li>
+                                        <li class="tag_js">JavaScript</li>
+                                    </ul>
+                        			<div class="r right_info">
+                        				<a href="#">在线地址</a>
+                                        <a href="#">项目地址</a>
+                        			</div>
+                        		</div>
+                            </div>
                         </div>
                     </div>
                 </div>
