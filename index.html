@@ -3,184 +3,23 @@
     <head>
         <meta charset="utf-8">
         <title>我的简历</title>
-        <style type="text/css">
-            body, ul, h1, h2, h3 {
-                margin: 0;
-                padding: 0;
-            }
-            ul, li {
-                list-style: none;
-            }
-            body {
-                background-color: #fff;
-                font-size: 16px;
-            }
-            .l {
-                float: left;
-            }
-            .r {
-                float: right;
-            }
-            .clearfix:after {
-                content: '\0020';
-                display: block;
-                height: 0;
-                clear: both;
-                visibility: hidden
-            }
-            .clearfix {
-                *zoom: 1
-            }
-            .gray_bg {
-                background-color: #f8f8f8;
-            }
-            .container {
-                width: 970px;
-                margin: auto;
-                padding-right: 15px;
-                padding-left: 15px;
-            }
-            .header {
-                min-height: 80px;
-            }
-            .section {
-                padding: 20px;
-            }
-            .section .title h2, .section .title p {
-                text-align: center;
-            }
-            .section .title h2 {
-                font-size: 35px;
-            }
-            .section .title p {
-                margin: 0 0 5px 0;
-                font-size: 26px;
-                color: #787d82;
-            }
-            .project_item {
-                border-bottom: 1px solid #d9dde1;
-                overflow: hidden;
-            }
-            .project_item .item_title {
-                padding: 23px 0 7px;
-                color: #14191e;
-                font-size: 20px;
-                font-weight: 700;
-                line-height: 24px;
-            }
-            .project_item .item_txt {
-                padding-top: 7px;
-                margin-right: 0;
-                overflow: hidden;
-            }
-            .project_item .item_txt_img, .project_item .item_txt_img img {
-                width: 270px;
-                /*height: 130px;*/
-                overflow: hidden;
-                margin: 0 20px 0 0;
-            }
-            .project_item .item_txt_content {
-                min-height: 140px;
-                line-height: 28px;
-                color: #787d82;
-                margin-top: -5px;
-            }
-            .project_item .item_txt_content strong {
-                color: #000;
-            }
-            .project_item .item_txt_btm {
-                padding: 14px 0 25px;
-                color: #93999f;
-                line-height: 19px;
-            }
-            .project_item .left_info li {
-                padding: 3px 5px;
-                margin-right: 5px;
-                float: left;
-                color: #FFF;
-                font-size: 12px;
-                border-radius: 4px;
-            }
-            .project_item .left_info .tag_html {
-                background-color: #FF4200;
-            }
-            .project_item .left_info .tag_css {
-                background-color: orange;
-            }
-            .project_item .left_info .tag_js {
-                color: #000;
-                background-color: #fde900;
-            }
-            .project_item .right_info a {
-                padding-left: 30px;
-                color: green;
-                text-decoration: none;
-            }
-            .work_exp_list .tl_item {
-                position: relative;
-                padding-left: 37px;
-                border-left: 1px solid #d3d7da;
-            }
-            .work_exp_list .tl_item_first:before {
-                content: '';
-                position: absolute;
-                width: 1px;
-                height: 20px;
-                left: -1px;
-                top: 0;
-                background-color: #fff;
-            }
-            .work_exp_list .time {
-                position: absolute;
-                left: 0;
-                top: 20px;
-                margin-left: -64px;
-                line-height: 16px;
-                font-size: 12px;
-                color: #8a8c8f;
-            }
-            .work_exp_list .time:before {
-                content: '';
-                display: block;
-                position: absolute;
-                left: 60px;
-                width: 8px;
-                height: 8px;
-                border-radius: 50%;
-                background-color: #d0d6d9;
-            }
-            .work_exp_list .time b {
-                font-size: 18px;
-                font-weight: 400;
-            }
-            .work_exp_list .time em {
-                display: block;
-                margin-top: 2px;
-            }
-            .work_exp_list .intro_wrap {
-                padding: 30px 0;
-            }
-            .work_exp_list .intro_logo {
-                width: 110px;
-            }
-            .work_exp_list .intro_work {
-                padding-left: 130px;
-            }
-            .work_exp_list .intro_work .title {
-                color: #93999f;
-            }
-            .work_exp_list .intro_work .title span {
-                font-weight: bold;
-                font-size: 18px;
-                color: #e73c31;
-            }
-        </style>
+        <link rel="stylesheet" href="./asset/css/index.css">
     </head>
     <body>
         <div class="wrap">
             <div class="header gray_bg">
-                <div class="container">
-                    
+                <div class="container clearfix">
+                    <ul class="contact_info">
+                        <li>姓名：黄土标</li>
+                        <li>求职目标：前端开发工程师</li>
+                        <li>性别：男</li>
+                        <li>学历：本科</li>
+                        <li>毕业学校：惠州学院</li>
+                        <li>专业：计算机科学与技术</li>
+                        <li>邮箱：huzhuangyongbiao@gmail.com</li>
+                        <li>电话：15018673312</li>
+                        <li><span>个人GitHub：</span><a href="https://github.com/huangtubiao"><img src="./asset/images/github.png" alt=""></a></li>
+                    </ul>
                 </div>
             </div>
             <div class="section">
@@ -190,7 +29,18 @@
                         <p>3年工作经验，追求高效率的编码</p>
                     </div>
                     <div class="content">
-
+                        <ul class="base_info">
+                            <li>
+            					<span class="detail_tag">开发技能</span>
+            					<i class="triangle"></i>
+            					<span class="detail">Scss、Less、Ionic、Jquery、Angularjs、Requirejs、Reactjs、Vuejs、thinkjs、Grunt、Gulp、Webpack、.NET、Node JS、SQL Server、MySQL等等。</span>
+            				</li>
+                            <li>
+            					<span class="detail_tag">其它</span>
+            					<i class="triangle"></i>
+            					<span class="detail">熟悉Web主流框架、类库的设计与实现，熟悉跨浏览器开发；熟悉常用工具如 firebug、fiddler、chrome 等；了解 Http 协议、W3C 规范，了解 web 性能优化、浏览器原理 对前后端合作模式有理解并有项目经验。</span>
+            				</li>
+                        </ul>
                     </div>
                 </div>
             </div>
