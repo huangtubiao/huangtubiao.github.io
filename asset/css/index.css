@@ -162,6 +162,30 @@ body {
     color: #000;
     background-color: #fde900;
 }
+.project_item .left_info .tag_r {
+    background-color: #61dafb;
+}
+.project_item .left_info .tag_rn {
+    background-color: #3b3738;
+}
+.project_item .left_info .tag_alt {
+    background-color: #db5800;
+}
+.project_item .left_info .tag_ionic {
+    background-color: #298fff;
+}
+.project_item .left_info .tag_ng {
+    background-color: #d44950;
+}
+.project_item .left_info .tag_vue {
+    background-color: #4fc08d;
+}
+.project_item .left_info .tag_think {
+    background-color: #337ab7;
+}
+.project_item .left_info .tag_requirejs {
+    background-color: #2e87dd;
+}
 .project_item .right_info a {
     padding-left: 30px;
     color: green;
