@@ -186,6 +186,9 @@ body {
 .project_item .left_info .tag_requirejs {
     background-color: #2e87dd;
 }
+.project_item .left_info .tag_sea {
+    background-color: #626D76;
+}
 .project_item .right_info a {
     padding-left: 30px;
     color: green;
