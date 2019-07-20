@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>我的简历</title>
+        <!-- <link rel="stylesheet" href="./asset/css/index.css"> -->
+        <style type="text/css">
+            body, ul, h1, h2, h3 {
+                margin: 0;
+                padding: 0;
+            }
+            ul, li {
+                list-style: none;
+            }
+            body {
+                background-color: #fff;
+                font-size: 16px;
+            }
+            .l {
+                float: left;
+            }
+            .r {
+                float: right;
+            }
+            .clearfix {
+                *zoom: 1
+            }
+            .clearfix:after {
+                content: '\0020';
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden
+            }
+            .gray_bg {
+                background-color: #f8f8f8;
+            }
+            .container {
+                width: 900px;
+                margin: auto;
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+            .header {
+                padding: 20px 0 10px 0;
+            }
+            .header .base_info .detail_tag {
+                background: #00b43c;
+                color: #fff;
+            }
+            .header .base_info .triangle::after {
+                border-left: 10px solid #00b43c;
+            }
+            .contact_info li {
+                float: left;
+                margin-right: 40px;
+                margin-bottom: 10px;
+                width: 280px;
+                height: 30px;
+            }
+            .contact_info li span, .contact_info li a {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            .contact_info li a, .contact_info li img {
+                height: 25px;
+                width: 25px;
+            }
+            .base_info li {
+                position: relative;
+                margin-right: 48px;
+                margin-bottom: 16px;
+                font-size: 14px;
+                line-height: 32px;
+                list-style: none;
+                overflow: hidden;
+            }
+            .base_info .detail_tag {
+                background: #93999f;
+                padding: 7px 4px 7px 12px;
+                box-sizing: border-box;
+                color: #07111b;
+                line-height: 14px;
+            }
+            .base_info .triangle {
+                position: relative;
+                margin-right: 8px;
+            }
+            .base_info .triangle::after {
+                position: absolute;
+                left: -5px;
+                content: '';
+                width: 0;
+                height: 0;
+                border-top: 16px solid #f8f8f8;
+                border-left: 10px solid #93999f;
+                border-bottom: 16px solid #f8f8f8;
+            }
+            .base_info .detail {
+                padding-left: 8px;
+                font-size: 16px;
+            }
+            .section {
+                padding: 20px;
+            }
+            .section .title h2, .section .title p {
+                text-align: center;
+            }
+            .section .title h2 {
+                font-size: 35px;
+            }
+            .section .title p {
+                margin: 0 0 5px 0;
+                font-size: 26px;
+                color: #787d82;
+            }
+            .project_item {
+                border-bottom: 1px solid #d9dde1;
+                overflow: hidden;
+            }
+            .project_item .item_title {
+                padding: 23px 0 7px;
+                color: #14191e;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+            }
+            .project_item .item_txt {
+                padding-top: 7px;
+                margin-right: 0;
+                overflow: hidden;
+            }
+            .project_item .item_txt_img, .project_item .item_txt_img img {
+                width: 300px;
+                height: 250px;
+                overflow: hidden;
+                margin: 0 20px 0 0;
+                object-fit: contain;
+            }
+            .project_item .item_txt_img {
+                border: 1px solid #efefef;
+            }
+            .project_item .item_txt_content {
+                min-height: 140px;
+                line-height: 28px;
+                color: #787d82;
+                margin-top: -5px;
+            }
+            .project_item .item_txt_content strong {
+                color: #000;
+            }
+            .project_item .item_txt_btm {
+                padding: 14px 0 25px;
+                color: #93999f;
+                line-height: 19px;
+            }
+            .project_item .left_info li {
+                padding: 3px 5px;
+                margin-right: 5px;
+                float: left;
+                color: #FFF;
+                font-size: 12px;
+                border-radius: 4px;
+            }
+            .project_item .left_info .tag_html {
+                background-color: #FF4200;
+            }
+            .project_item .left_info .tag_css {
+                background-color: orange;
+            }
+            .project_item .left_info .tag_js {
+                color: #000;
+                background-color: #fde900;
+            }
+            .project_item .left_info .tag_r {
+                background-color: #61dafb;
+            }
+            .project_item .left_info .tag_rn {
+                background-color: #3b3738;
+            }
+            .project_item .left_info .tag_alt {
+                background-color: #db5800;
+            }
+            .project_item .left_info .tag_ionic {
+                background-color: #298fff;
+            }
+            .project_item .left_info .tag_ng {
+                background-color: #d44950;
+            }
+            .project_item .left_info .tag_vue {
+                background-color: #4fc08d;
+            }
+            .project_item .left_info .tag_think {
+                background-color: #337ab7;
+            }
+            .project_item .left_info .tag_requirejs {
+                background-color: #2e87dd;
+            }
+            .project_item .left_info .tag_sea {
+                background-color: #626D76;
+            }
+            .project_item .right_info a {
+                padding-left: 30px;
+                color: green;
+                text-decoration: none;
+            }
+            .work_exp_list .tl_item {
+                position: relative;
+                padding-left: 37px;
+                border-left: 1px solid #d3d7da;
+            }
+            .work_exp_list .tl_item_first:before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 20px;
+                left: -1px;
+                top: 0;
+                background-color: #fff;
+            }
+            .work_exp_list .time {
+                position: absolute;
+                left: 0;
+                top: 20px;
+                margin-left: -64px;
+                line-height: 16px;
+                font-size: 12px;
+                color: #8a8c8f;
+            }
+            .work_exp_list .time:before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 60px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #d0d6d9;
+            }
+            .work_exp_list .time b {
+                font-size: 18px;
+                font-weight: 400;
+            }
+            .work_exp_list .time em {
+                display: block;
+                margin-top: 2px;
+            }
+            .work_exp_list .intro_wrap {
+                padding: 30px 0;
+            }
+            .work_exp_list .intro_logo {
+                width: 110px;
+            }
+            .work_exp_list .intro_work {
+                padding-left: 130px;
+            }
+            .work_exp_list .intro_work .title {
+                color: #93999f;
+            }
+            .work_exp_list .intro_work .title span {
+                font-weight: bold;
+                font-size: 18px;
+                color: #e73c31;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="header gray_bg">
+                <div class="container clearfix">
+                    <ul class="contact_info">
+                        <li>姓名：黄土标</li>
+                        <li>求职目标：前端开发工程师</li>
+                        <li>性别：男</li>
+                        <li>邮箱：huzhuangyongbiao@gmail.com</li>
+                        <li>电话：15018673312</li>
+                        <li><span>个人GitHub：</span><a href="https://github.com/leoyb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAMAAAD04JH5AAAAP1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACzJYIvAAAAFHRSTlMA8BBAYODAIICgUJBwMNDPsD+vf9AKrJcAAAQgSURBVHja7NfLcuIwEAXQ7rbexibB9/+/dWqSBTOxWuLRwpVKzoaFTenSvghB39j7X9v28UIv9V62HPBFyFt5RY7ldGGo+HJaaBxx18VbIZzQCCUzbsS5kLE4e9zFz9Fy+YwHZKsIS4ZufIQY8ITwdISN8RTe6BmTx9P8RI+SC0xchB6yeBjxCz3gBEMn4/GPfwwLw5hfjl0f4DsSFMYAXOhGDoO4g9cHnP369gkWDLWM7X8fL5br2yeQM4Y7C+kyXiCTyuEl3B0FKEQypRUPWdMkROX2GuwLwPQpJo87+RTpE+9rQFWp+bjcXRG8axYrUUXEXiFSInSXvyrY4Uh7AXtC/5LEuOIQQvoQQvjvQvryNuwF2inY8/U/CWtOU9xdmlJe638FvD7bK/G35XRzEVJJmd1ts/XSbyAwk4kMdHsorNxkIaGCRb/HPkD/pO4HB+g13OH1AeC6A8AbmXhDbwQFdYFMBNSV/jGATHQPBsJQTGRggoJFqaDxTjR3TyahcYcBB6BZ8tgawNgRxHbClYys7Qln1HEkI5Gb3wOPukRmEup8qwJeyIz4RgmcPoDxI3D6Ts1ChoT1Epy1S6Yyqs76Tl3IVEGd3kEyprZw6vwSD96MJkrdXXjofnzSLiSypX/QoI3GlvqofwMcHwDHBuCjA+DnBPhTvXXkNhDDQFHVKtbKMf//1hxiIEDiUbHoDTJHH6yBxDIsmyCBvw1ErOgkAhmJMn9SMvKLceBQwjgggXP0gGZEIJ/jBgYWX5dz3AAfk/gUIzig9DS4cBREwB0IvTzwFh3Fa6XcGW/gOgV45Pf7QWKACG5HOhj63jsbRkiiF4BvmRGcFqtMAQg3MuXb9bhLZfmULhn+/8AYV8EsgINd3V/8wDDEEHViY4is2P3jYBu4hywmxHC6adzD8fIzmIN7aOCepBYTQ5yfohN/g+IlVkBBdA+TgF7RX+Ny+vkQdoFDKAcPcQHBMj1+ar+NISc9cXia28AlDayVUs8ynL/bG6Chb/fsiSeRsWS6675tRpEVlNBx2CP0pGyF76ArTyN3UyaFjpAwq3EfWwCWjYeGk4a2IH0wykg3fsA0kea1D4YbX18CduVUF8QI42fMT/WYX5snt1ULxHOVy3PfKgLLwE7P2LB7ut/dwqL+WfKjDJJV+spOLoJ8sEggT3qR2xpMYPjp8VoRJzCuNq7binR3p9Pulkbbe7V2cy9/6fyxJ1ORJVDWSzlnBQnE14rJj3ILD8lT8g6BLFHObBCwIgWVGkCo1E4kTYDSYl1RZQnUZYfWUZJA1GodhaQIUBH8zk0NIPvFW5EgUNQGQtsl0ILag6m4bTVWRNWofVi30EE2II/swXqw7d2dDXmr5GAaEIqwwGpGyUIXx8xkpvqCrmj1BlyLmemQmHJV/wifBCMdLYmV4BcAAAAASUVORK5CYII=" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="container">
+                    <ul class="base_info">
+                        <li>
+                            <span class="detail_tag">个人简介</span>
+                            <i class="triangle"></i>
+                            <span class="detail">搜狐视频前端工程师，平时混迹于 GitHub 以及其它技术社区网站，参与过多个开源项目的开发、webpack中文社区的建立以及技术文档的翻译工作，目前参与区块链相关技术的研究和开发，例如bitsharesjs源码、比特数字钱包等等。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <div class="container">
+                    <div class="title">
+                        <h2>熟悉前端，对后端也有不解之情</h2>
+                        <p>3年工作经验，追求高效率的编码</p>
+                    </div>
+                    <div class="content">
+                        <ul class="base_info">
+                            <li>
+            					<span class="detail_tag">开发技能</span>
+            					<i class="triangle"></i>
+            					<span class="detail">React Native、React、Vuejs、Angular、Ionic、webpack、.NET、Node JS、SQL Server、MySQL 等等前端主流框架。</span>
+            				</li>
+                            <li>
+            					<span class="detail_tag">其它</span>
+            					<i class="triangle"></i>
+            					<span class="detail">熟悉Web主流框架、类库的设计与实现，熟悉跨浏览器开发；熟悉常用工具如 Firebug、fiddler、Charles、Chrome DevTool 等；了解 Http 协议、W3C 规范，了解 web 性能优化、浏览器原理、对前后端合作模式以及前端工程化有理解并有项目经验；熟悉 svn、Git 版本管理的使用。</span>
+            				</li>
+                            <li>
+            					<span class="detail_tag">自我评价</span>
+            					<i class="triangle"></i>
+            					<span class="detail">对事物有较强的分析能力、问题重现能力、学习能力、表达能力，善于发现问题，解决问题；拥有较为全面的专业知识和丰富的实践经验，为人正直、工作细致、善于沟通、能吃苦耐劳，能承受较强的工作压力，有极强的责任心、团队合作意识和集体荣誉感，愿意为事业奉献。</span>
+            				</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="section gray_bg">
+                <div class="container">
+                    <div class="title">
+                        <h2>对编程充满热情</h2>
+                        <p>大一时期就加入学校的技术团队wando</p>
+                    </div>
+                    <div class="content">
+                        wando团队是我们学校最早成立的一个技术团队，在团队中，参与了团队严格的培训、训练和项目实践，以及基于ASP.NET、Ext.js、SQL Server等等技术开发了多个ERP系统。
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="container">
+                    <div class="title">
+                        <h2>曾在国内著名互联网公司任职</h2>
+                        <p>有大型项目开发、优化经验</p>
+                    </div>
+                    <div class="content">
+                        <div class="work_exp_list">
+                            <div class="clearfix tl_item tl_item_first">
+                                <span class="time">
+                                    <b>现在</b>
+                                </span>
+                                <div class="intro_wrap">
+                                    <img class="intro_logo l" src="data:image/gif;base64,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" alt="">
+                                    <div class="intro_work">
+                                        <div class="title">
+                                            <span>广州市千均网络科技有限公司</span> —— 前端开发工程师（2016年7月15—现在）
+                                        </div>
+                                        <p><strong>Task：</strong>搜狐旗下的千帆直播，大型的在线娱乐直播平台，本人负责前端业务的开发工作以及担任前端技术研发组成员。</p>
+                                        <p><strong>Action：</strong>此期间，逐步进行如下工作：<p>（1）PC 直播间性能优化以及直播间的重新改版；</p><p>（2）H5 直播页开发以及 H5 活动页的开发；</p><p>（3）重构前端的研发流程，结合项目引入了 gulp 构建工具，促成前端工程化，提升前端的研发效率；</p><p>（4）重构 H5 直播页，采用了当下流行的 Vuejs 进行重构，由本人负责框架搭建以及工程化构建；</p><p>（5）前端规范文档的编写，针对使用的新技术进行编写规范文档。</p></p>
+                                        <p><strong>Result：</strong>推广了新技术在团队中的使用，例如Vue、React Native。在对 PC 直播间性能优化和改版中，获得了良好的结果，直播间的首屏加载速度以及内存占用、CPU 占用上都获得了不错的成果。在此过程中，加深了性能优化的知识，对构建一个性能良好、可扩展、可维护的 web 应用有一定的讲解，同时也对团队管理、团队协作以及团队成长有一定的讲解，期间获得了 leader 多次表扬和奖励。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix tl_item">
+                                <span class="time">
+                                    <b>2016</b>
+                                    <em>07月15日</em>
+                                </span>
+                                <div class="intro_wrap">
+                                    <img class="intro_logo l" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKEAAAAtCAMAAADx/fsnAAAAbFBMVEUAAAA/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/A/v/D3vsGdAAAAI3RSTlMACB8Q+CjiMTtM8erZWxS6jBhpQ81i051xwbDHlH95pFSqhKws/SAAAAa6SURBVFjDvVmHkpswEGWFJETvxTSX/f9/zIJEsQ3ny0ziN8mcD7Wn3bcFn/UOW9zGJBldBhbhbEI/hI4N1tcBTu3hisJ9p8ASHydwj3PkrfNdknaDr0iipwu4EjW4C5EI64Lz5nscYcQjJPY6I5e4wF9M2vhe+SWOanMvn4ALvNxYOH4irhwxc4fGk8z6ApqFnazaoQzLsQ3kwnmYjeQU+Ir4ltKAKLhr/W/A3diry9YQhjSMfZxxBzPpHT2jgRqzw13/IUHjwO41eJ2rp42lKV7xACGN9FgeBF4VnHF0/lYXvTZgcrChW+GEK5ibHCCBaeDd0RlyHWUsu17r624Cw2I9Sjj7NaLtj24VagWGh+zTFic0emuJB6jJXtIXryaMscrzsFQN+ncmENVmQgzEMiug5yvgom8FNlPlo09u5kaaYGm9Y/Ot2afEI5AKB2zhaZXqEP2gu49OeWW0kD8z1G4eWqfBels4IrpGW/JSZ7kpCO1McLROYNKM0VSHB/Bu6iJx7wM1L1GwccJi50vDkBEhgVKss/xJ8baP1UPBfvqE2DqH8E1EEHKOR5DCCYpop8G4wp00Iw93SRNc9MewV6TUKoIKb8vzDn2aBWEWWXvEsxWcH5PlRKvSt6qOKw9xx+y5QnlRmq5iw+tCVjUdIu+SUUAwyTtb3VxOZnhHhAReWz8hCpDAtHUOjUjKTzGGpww7pBUCKCJYIKIfwiL6+Kq9LGbDCM8EGU2/W/DWi2jt05wfkSHB7OPhEVpnQK52ygiQ0f+mayEtkIejh50Ceh4nAkykJHiHORIHndiCBCDeMivYTEyVVSKh+5TSmy5YfBHgKZpdypNYPkh9DaQBxjlFQR8XwhSaGPlAEcF5CG5kKa7jxmYTaY8mAaR52dRt19FKQAJvrE9IV6E/OJ6h39/JM8qwlXHc2vC6SHiAwtiZ62WJ4+orz7XsPKmwChB1iyyMk38Pdc6wi/bNsBo8TCMHtMPy3GVmxNO6uCaOo5XhOoY6RwmMuNU5OBKjrZ7IyPo9mIdn8J5v6noYFHEp8uReoB/X5SZq2dSTtJKnPO/4iDxysRdaJpp3MjO0T+Rn77HltlPkuzzvDHQgmalDLCbzLlSAIz1JwVWWvUsvJuTR0dG8MbzPDOGQYH697PEwcvqBobuedqPjfI5gpX3j0NmPfUNRmJrizvVk4Z4QEU/T2jOMzxmqgz6LAJ8Ymos/WMM56OANdCyY5bHSDOGCCVEpatPbeZlbrAzTzwzfu4TH7xk6OZtM5INeIrcsl6OXp5phOi8Qy7KIWaxC9crwfq7D6ILPKD96Wb10dXJhuCn0gsXSOeRzEoF2624cQ4sQLR8fSPDZcVPjhjPKluvzf4yU96wVLrWc+ZgxFTYNncN9x3RfcEc+CDUGdP7GcG0cl4+uaV5/BOguln3KNrH9IpOC1ooyIWdwJFSKnMqW7gt6RNley/yyqkNITLfW1pynt/7Va4L9KWM/nlcNKK2wm2wbX5MsZ/bqTN0TAkujKZBvfAtgUq6BNOeBbu/SX9gwAJMUTvHiCrcPrTApFVF7DkWh91oRbW8BW6dfy1W5BD78XOh8HSjmbmeQ4pevo1CKs35+95GtWe9z3at/J8MrWP8DwE1bcg53JtV9cvJ/++bBvIuq81ZB7rIxnDu5/QsT2iKdf2jXwbMmhIJpbNUn+DihYj++6i2pbcQzeM93FOO0YFAQCjo76i2RzfE9XzQf6mIg4/RFQxaI/QsFc1PE2gglxziCpGBwMZzyNZkdAep9uUjlb1NNiOw2QDFAcIXWdhBcLlRtyXreFFzMp+YWawuKPnJzkpIQ1XQI4zfGMwj8DHj6FAjY2mcEt/NbPEPxsjoKso4rKiCNn2GTVJaNTYvKlB0oyqkP93G0FNXcXNl3SlXXZK4httUzu8pixpc9oTJWFO8ajM35n3wcvIlk8CtfXoDqhFfLSea138WyIj8AuTTQ/efoK9cDK/Tz9kYadyGdGdqW8ljQ4yrNlJuElsGzATOJuCvcIf+YCjfcMHfxNifQSOKc11z6Z9n+new5TgpPVdCBHXRZ9SCt9VVsub6KggtZvETIEeGts+dFtlWXNKv4E8HM+9wybICc7Ge+3YrmdtDVD0LHgls0CeEWCqDnKpyGWagoosKIul/6PVJEIDrqtLgs+ux2C7O6kovFLpGO6VML0oT/D0hwBfc8vmMzwOK2E3zrzwHqOJFUzmbo5DBRM+tbgBt/j4D8OXuP/P177G8CVIw78Fq8TxFDwBf6vQPW1wEiq+9xHN8TN4WzOXbKWGp/h90fDMEoREVoM8YAAAAASUVORK5CYII=" alt="">
+                                    <div class="intro_work">
+                                        <div class="title">
+                                            <span style="color: #36bef0">深圳市轻松行科技有限公司</span> —— 前端开发工程师（2015年07月07日—2016年7月15日）
+                                        </div>
+                                        <p><strong>Task：</strong>公司初创，计划构建在线差旅服务平台，形似猪八戒，供企业提出差旅需求，服务商提供差旅方案，实现差旅各环节的闭环管理，上线不久即获得与腾邦集团、恒大集团、滴滴打车等知名企业合作。本人负责前端业务的开发工作。</p>
+                                        <p><strong>Action：</strong>此期间，逐步进行如下工作：<p>（1）业务代码编写、接口的定义、组件的开发；</p><p>（2） 开展项目目录结构优化，重构现有工程化方案。在接手公司的差旅费用报销系统时，前端的开发环境是强依赖于后端的开发环境，前端缺少一套完整的自动化开发工程，严重影响前端的开发效率和调试，针对此情况，以及考虑多方面的因素，本人决定把该项目的前端代码抽离出来，重构项目的自动化开发工程，以及对项目的目录结构进行了重写和优化，大大提高了前端的开发效率；</p><p>（3）负责Hybrid 应用项目的技术选型和框架的搭建；</p><p>（4）协作其他团队，包括反馈设计漏洞、协助完成自适应设计、浏览器降级设计等、根据项目进度及计划，协助项目工作等等。</p></p>
+                                        <p><strong>Result：</strong>项目全部按时上线，并多次获得公司的多次奖励。本人在此过程中，亦深入学习 grunt、gulp、webpack 等工程化工具，对使用 angularjs、requirejs、nodejs 等技术栈搭配 高性能 web 项目有一定的了解，同时也对 html、css、js 有了进一步的理解；对如何对新的技术进行快速学习并运用于项目中以及团队的合作开发亦略有心得；加深了对项目开发流程和技巧的掌握，从需求评审到原型设计再到项目的开发和后期维护，深刻认识到前期技术的选型和相关规范的制定对于后期维护和产品的好坏是极其重要的。</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix tl_item">
+                                <span class="time">
+                                    <b>2015</b>
+                                    <em>07月07日</em>
+                                </span>
+                                <div class="intro_wrap">
+                                    <img class="intro_logo l" src="data:image/png;base64,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" alt="">
+                                    <div class="intro_work">
+                                        <div class="title">
+                                            <span style="color: #00ccaa">惠州思博互联网科技有限公司</span> —— 前端开发工程师、.NET开发工程师（2014年09月01日-2015年07月07日）
+                                        </div>
+                                        <p><strong>Task：</strong>老师创业，计划构建在线服装定制平台，将服装产品的设计、生产、交易、物流等各环节互联网化，形成活跃的交易与设计平台。本人负责前端业务的开发工作，经历了创业项目从无到有的整个开发流程。</p>
+                                        <p><strong>Action：</strong>先后参与公司多个项目的前后端开发，使用.NET WEB API、WEB、SQL Server 等技术构建应用程序；本人负责编码、测试等工作。</p>
+                                        <p><strong>Result：</strong>在团队合作下，公司项目准时上线；这段时间的工作经历为自己带来了许多成长机会，学会了许多基础技术和团队协作的能力，提升了自己的综合能力。</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
